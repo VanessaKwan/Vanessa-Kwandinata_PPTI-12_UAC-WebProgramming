@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class State extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function User()  {
+        return $this->hasMany(User::class);
+    }
+
+    public function Couple() {
+        return $this->hasMany(Couple::class);
+    }
 }

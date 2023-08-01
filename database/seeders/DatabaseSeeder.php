@@ -25,7 +25,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             StateSeeder::class,
-            JobSeeder::class
+            JobSeeder::class,
+            UserSeeder::class,
+            JobUserSeeder::class
         ]);
     }
 }

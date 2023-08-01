@@ -17,14 +17,16 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('gender');
-            $table->string('email');
+            $table->integer('age');
             $table->string('photo')->nullable();
             $table->string('password');
             $table->string('username');
-            $table->integer('phone');
+            $table->string('phone');
             $table->unsignedBigInteger('state_id');
             $table->foreign('state_id')->references('id')->on('states')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->decimal('wallet')->default(0);
+            $table->integer('wallet')->default(0);
+            $table->integer('minus')->default(0);
+            $table->integer('registPrice');
             $table->timestamps();
         });
     }

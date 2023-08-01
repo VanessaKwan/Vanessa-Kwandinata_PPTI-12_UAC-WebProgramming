@@ -4,13 +4,13 @@
         @guest
             <a href="https://flowbite.com/" class="flex items-center">
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Pacaran Yuk</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ConnectFriend</span>
             </a>
         @endguest
 
         @auth
             <img src="{{ asset('storage/' . Auth::user()->photo) }}" alt="Photo" style="object-fit: cover; width: 3vw; height: 3vw; border-radius: 50%;">
-            <span class="self-center ml-[-29vw] text-2xl font-semibold whitespace-nowrap dark:text-white">Pacaran Yuk</span>
+            <span class="self-center ml-[-29vw] text-2xl font-semibold whitespace-nowrap dark:text-white">ConnectFriend</span>
         @endauth
 
         <div class="flex md:order-2">
@@ -45,13 +45,9 @@
 
                     @if (!Auth()->User()->can('admin'))
                         <li>
-                            <a href="/like" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Like</a>
+                            <a href="/like" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Wishlist</a>
                         </li>
                     @endif
-
-                    <li>
-                        <a href="/profile" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
-                    </li>
                 </ul>
             </div>
         @endauth
